@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AniSmotrim: Профиль</title>
+        <link href="../css/All copy.css" rel="stylesheet" type="text/css">
+    </head>
+    <body class="page dark-theme">
+         <div id="main">
+          <div class="menu">
+            <div class="menuUp">
+               <div>
+                 <a href="Main — копия.html" class="logo"><img src="../img/logo4.png" class="images logo" alt="Logo"></a>
+               </div>
+                 <nav>
+                 <ul>
+                 <li><a href="#" class="miniMenu"><img src="../img/menu_682685_list_512x512.png" class="miniMPic" alt="Logo"></a>
+                   <ul>
+                     <li><a href="Anime.html">Аниме</a></li>
+                     <li><a href="Manga.html">Манга</a></li>
+                     <li><a href="Pers.html">Персонажи</a></li>
+                     <li><a href="Kaguya.html">Случайное аниме</a></li>
+                 </ul>
+                 </li>
+                 </ul>
+               </nav>
+               <div class="poisk">
+                   <div><a href="Main — копия.html"><img src="../img/LogoName3.png" class="images" alt="LogoName"></a></div>
+                   <div>
+                      <form>
+                         <input type="text" placeholder="Искать здесь...">
+                         <button type="submit"></button>
+                       </form>
+                   </div>
+               </div>
+               <div class="profil">
+                <div><img src="../img/Profil.jpg" class="imag hidenImag" alt="LogoName"></div>
+                <div>
+                   <a href="Profil.html"><h2>Профиль</h2></a>
+                   <h3>Выход</h3>
+                </div>
+                </div>
+            </div>
+            <div class="menuDown">
+              <!--
+              <div></div>              
+              <form action="Anime.html" class="MenuButton">
+                <button name="menu">Аниме</button>
+              </form>
+              <form action="Manga.html" class="MenuButton">
+                <button name="menu">Манга</button>
+              </form>
+              <form action="Pers.html" class="MenuButton">
+                <button name="menu">Персонажи</button>
+              </form>
+              <form action="Kaguya.html" class="MenuButton">
+                <button name="menu">Случайное аниме</button>
+              </form>
+            -->
+            </div>
+        </div>
+             <div class="content">
+                 <div class="Info">
+                     <div class="LeftI">
+                         <img src="../img/Profil.jpg" alt="Profil">
+                         <div><h2>GrenadIY</h2></div>
+                         <a href="ProfilForm.html"><button name="menu">Изменить</button></a>
+                     </div>
+                     <div class="RightI">
+                         <div class="InfoL"><h3>Дата рождения:</h3></div>
+                         <div class="InfoR"><h3>21.02.2002</h3></div>
+                         <div class="InfoL"><h3>Почта:</h3></div>
+                         <div class="InfoR"><h3>DWADSdWdax@fwa.daw</h3></div>
+                         <div class="InfoL"><h3>Номер телефона:</h3></div>
+                         <div class="InfoR"><h3>+7 *** *** 66 66</h3></div>
+                         <div class="InfoL"><h3>Ранг анимешника:</h3></div>
+                         <div class="InfoR"><h3>Титан одиночества</h3></div>
+                     </div>
+                 </div>
+
+                 <div class="Pay">
+                    <div>
+                      <!-- v-cloak скрывает нескомпилированные элементы, пока сущность Vue не готова -->
+                      <form id="mainUsl" v-cloak>
+                        <h1>Услуги</h1>
+                        <ul>
+                            <!-- Цикл проходит по массиву услуг, присваивает обработчик для клика, и устанавливает или удаляет класс "active" -->
+                            <li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{ 'active': service.active}">
+                                <!-- Показывает название и цену для каждого вложенного элемента. Vue имеет встроенный фильтр валют для формирования цены -->
+                                {{service.name}} <span>{{service.price | currency}}</span>
+                            </li>
+                        </ul>
+                        <div class="total">
+                            <!-- Высчитывает итоговую сумму -->
+                            Итого: <span>{{total() | currency}}</span>
+                        </div>
+                      </form> 
+                      <button name="menu"><a href="">Купть подписку</a>
+                    </div>
+                 </div>
+
+                 <div class="Achivment">
+                     <h2>Достижения</h2>
+                     <div class="AchivmentAll">
+                        <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                            <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Kagy.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">В любви как на войне</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/JJ.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">JoJo`s</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Pivo.jpeg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/rei.jpeg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                            <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Kagy.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">В любви как на войне</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/JJ.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">JoJo`s</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Pivo.jpeg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/rei.jpeg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                           <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></div>
+                           <div><h2 class="filmN">Евангелион</h2></a></div>
+                         </div>
+                         <div class="film">
+                            <div><img src="../img/Kagy.jpg" alt="Poster" class="imag"></div>
+                            <div><h2 class="filmN">В любви как на войне</h2></a></div>
+                          </div>
+                          <div class="film">
+                            <div><img src="../img/JJ.jpg" alt="Poster" class="imag"></div>
+                            <div><h2 class="filmN">JoJo`s</h2></a></div>
+                          </div>
+                        </div>
+                 </div>
+            </div>
+            <footer class="footer">
+                <div></div>
+                <div class="centerFooter">
+                  <div>
+                    <div id="icoFooter"></div>
+                    <p class="fut">© 2022 «AniSmotrim» — онлайн кинотеатр</p>
+                  <button class="theme-button" type="button">Изменить тему</button>
+                  </div>
+                  <div class="URLs">
+                    <div>
+                      <a href="Help.html"><p class="fut">Тех. поддержка</p></a>
+                      <a href=""><p class="fut">Как купить</p></a>
+                      <a href=""><p class="fut">В рассрочку</p></a>
+                      <a href=""><p class="fut">Обзоры</p></a>
+                    </div>
+                    <div> 
+                      <a href="Oplata.html"><p class="fut">Оплата</p></a>
+                      <a href=""><p class="fut">Гарантия, возврат</p></a>
+                      <a href=""><p class="fut">Политика кофидециальности</p></a>
+                      <a href=""><p class="fut">Правила продажи подписки</p></a>
+                    </div>
+                    
+                    <div>
+                      <h3 class="fut">Мы в социальных сетях</h3>
+                      <div id="picturies">
+                        <a href="https://vk.com/dantesmen" target="_blank"><div class="pictureVK"></div></a>
+                        <a href="" target="_blank"><div class="pictureTG"></div></a>
+                        <a href="" target="_blank"><div class="pictureYT"></div></a>
+                        <a href="" target="_blank"><div class="pictureVB"></div></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div></div>
+                </div>
+                <div></div>
+          </footer>
+         </div>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+         <script src="../java/Oplata.js"></script>
+         <script src="../java/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+.Catalog{
+    border-radius: 100px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 360px;
+    margin-right: 5%;
+}
+.CatalogUp{
+    margin-left: 5%;
+}
+.CatalogDown{
+    margin-left: 3%;
+    margin-right: 3%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px;
+}

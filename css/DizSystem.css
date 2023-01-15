@@ -1,0 +1,44 @@
+.Post{
+    box-shadow: 0 0 5px 5px red;
+    border-radius: 5px;
+    background-color: dimgray;
+    margin-top: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 600px 100px; 
+}
+.Post > :first-child {
+    margin: 25px;
+}
+.Post  h2, .Post h3 {
+    text-align: center;
+}
+.imagg{
+    height: 100%;
+    width: auto;
+}
+.PostIm{
+    height: auto;
+    width: 90%;
+    border-radius: 15px;
+}
+.SvgPic{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 50% 50%;
+    margin: 30px;
+}
+.SvgPicInfo{
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-template-rows: 40% 60%;
+    margin: 10px;
+}
+.SvgPicInfo div{
+    margin-left: 35%;
+}
+.SvgPicInfo > p{
+    text-align: center;
+}

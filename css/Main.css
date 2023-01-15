@@ -1,0 +1,681 @@
+.dark-theme {
+    background-color: rgb(36, 36, 36);
+    margin: 0;
+
+}
+.light-theme {
+    background-color: rgb(199, 154, 154);
+    margin: 0;
+
+}
+h2, h3{
+    font-size: 2em;
+    font-style: italic;
+}
+.light-theme h2, h3{
+    color: rgb(255, 255, 255);
+}
+.dark-theme h2, h3{
+    color: white;
+}
+
+p{
+    font-size: 1.3em;
+}
+
+.dark-theme p{
+    color: #fff;
+}
+.light-theme p{
+    color: #000;
+}
+
+.dark-theme a > p{
+    color: #000;
+}
+.light-theme a > p{
+    color: #fff;
+}
+.fut{
+    font-size: 1em;
+}
+.light-theme .fut{ 
+    color: #000;
+}
+.dark-theme .fut{ 
+    color: #000;
+}
+.theme-button{
+    width: 200px;
+    height: 40px;
+}
+.dark-theme .theme-button {
+    color: #5f5f5f;
+    border: 1px solid #5f5f5f;
+}
+.light-theme .theme-button {
+    color: rgb(199, 154, 154);
+    border: 1px #000;
+}
+.dark-theme .poster, 
+.dark-theme .menu, 
+.dark-theme .strings, 
+.dark-theme button[name="menu"],
+.dark-theme #main > :first-child{
+    background-color: rgb(80, 80, 80);
+    box-shadow: 0 0 5px 5px rgb(126, 126, 126);
+}
+.light-theme .poster, 
+.light-theme .menu, 
+.light-theme .strings, 
+.light-theme button[name="menu"],
+.light-theme #main > :first-child{
+    background-color: rgb(131, 0, 0);
+    box-shadow: 0 0 5px 5px red;
+}
+.pictureVK {
+    background-image: url(../img/icon32vk.svg);
+  }
+  .pictureTG {
+    background-image: url(../img/telegramicon.svg);
+  }
+  .pictureYT {
+    background-image: url(../img/youtube302.svg);
+  }
+  .pictureVB {
+    background-image: url(../img/vibericon.svg);
+  }
+ /*-----------------------Мобильный экран-----------------------------*/
+@media screen and (max-width: 1600px) {
+    h2, h3 {
+        text-align: center;
+        font-weight: bold;
+    }
+    .hidenImag{
+        visibility: hidden;
+    }
+    #main {
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 5% 5fr 200px;
+        grid-gap: 2vw;
+    }
+    #main > :only-child{
+        border-radius: 0px 0px 15px 15px;
+    }
+    
+    /*-----------------------Верхнее меню-----------------------------*/
+    .menu{
+        border-radius: 0px 0px 15px 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 5%;
+        margin: 0;
+        background-color: rgb(85, 85, 85);
+    }
+    /*button[name="menu"]{
+        height: 60px;
+        width: 200px;
+        background-color: rgb(80, 80, 80);
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+    }*/
+    button[name="next"]{
+        height: 60px;
+        width: 60px;
+        margin-top: 5px;
+        background-color: rgb(80, 80, 80);
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+    }
+    .menuUp{
+        display: grid;
+        grid-template-columns: 1px 25% 1fr 25%;
+        grid-template-rows: 70px;
+    }
+    .logo{
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+    }
+
+    nav {
+        width: 60px;
+        height: 20px;
+        margin: 10px ;
+    }
+    
+    /* убираем отступы и поля, а также list-style для "ul", 
+     * и добавляем "position:relative" */
+    nav ul {
+        
+        padding:0;
+        margin-top: 0px;
+        margin-left: 10px;
+        list-style: none;
+        position: relative;
+        }
+    
+    /* применяем inline-block позиционирование к элементам навигации */
+    nav ul li {
+        height: 65px;
+        margin: 0px -14px 0 0;
+        display:inline-block;
+        background-color: #334;
+        box-shadow: 0 0 5px 5px red;
+        border-radius: 25px 25px 25px 25px;
+        }
+    
+    /* стилизуем ссылки */
+    nav a {
+        display:block;
+        padding:0 10px;
+        color:#FFF;
+        font-size:20px;
+        line-height: 60px;
+        text-decoration:none;
+        
+    }
+    
+    /* изменяем цвет фона при наведении курсора */
+    nav a:hover {
+        background-color: #000000;
+    }
+/* скрываем выпадающие списки по умолчанию
+			 * и задаем абсолютное позиционирование */
+             nav ul ul {
+			    display: none;
+			    position: absolute;
+			    top: 100%;
+                
+			}
+			
+			/* отображаем выпадающий список при наведении */
+			nav ul li:hover > ul {
+			    display:inherit;
+			}
+			
+			/* первый уровень выпадающего списка */
+			nav ul ul li {
+                
+			    min-width:170px;
+			    float:none;
+			    display:list-item;
+			    position: relative;
+                box-shadow: 0 0 5px 5px red;
+			}
+
+
+
+    .miniMenu{
+        width: 100%;
+        height: 100%;
+
+    }
+    .miniMPic{
+        width: auto;
+        height: 60px;
+    }
+    .poisk{
+        grid-template-columns: 20%; /*1fr*/
+        grid-template-rows: 42px 20px;
+    }
+    .poisk > :first-child{
+        
+        color: white;
+    }
+    .poisk > :last-child{
+        height: 15px;
+        
+    }
+    
+    * {box-sizing: border-box;}
+    
+    
+
+    
+    .profil{
+        display: grid;
+        grid-template-columns: 0px 70px 40px;
+        grid-template-rows: 1fr;
+    }
+    .menuDown{
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px;
+    }
+    .menuDown > form {
+        margin: 0;
+        width: 0px;
+        visibility: hidden;
+    }
+    form {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .poisk > input, button {
+        border: none;
+        outline: none;
+        border-radius: 3px;
+      }
+      input {
+          width: 100%;
+          height: 40px;
+          background: #f9dada;
+          padding-left: 15px;
+        }
+        .poisk  button {
+            height: 32px;
+            width: 32px;
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            background: #f14242;
+            cursor: pointer;
+          }
+           button:before {
+            color: #f9dada;
+            font-size: 10px;
+            font-weight: bold;
+          }
+    /*-----------------------Контент----------------------------------*/
+    .content{
+        margin-left: 4px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+    }
+    .contentP{
+        margin-left: 10px;
+        margin-right: 80px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .poster{
+        box-shadow: 0 0 5px 5px red;
+        border-radius: 50px;
+        margin-right: 10%;
+        margin-left: 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .poster > :first-child {
+    
+        margin: 25px;
+    }
+    .poster p {
+        font-size: 2em;
+        margin-left: 2%;
+        margin-right: 2%;
+        text-align: left;
+        font-weight: bold;
+        color: white;
+    }
+    .strings{
+        
+        border-radius: 15px 0px 0px 15px;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 300px;
+    }
+    .stringsUp{
+        display: grid;
+        grid-template-columns: 2px 10% 20% 70px;
+        grid-template-rows: 1fr;
+    }
+    .stringsDown{
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .film{
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: 225px 75px;
+    }
+    .profImag{
+        margin-top: 100px;
+        border-radius: 50px;
+    }
+
+    .filmN{
+        text-align: center;
+        font-style: normal;
+    }
+    /*-----------------------Подвал-----------------------------------*/
+    .footer{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr ;
+        margin: 0;
+        background-color: red;
+    }
+    .footer > div {
+        background-color: white;
+    }
+    .centerFooter{
+        display: grid;
+        grid-template-columns: 300px 0px 300px ;
+        grid-template-rows: 1fr ;
+    }
+    #icoFooter{
+        background-image: url(../img/LogoName3.png);
+        margin-top: 20px;
+        width: 300px;
+        height: 40px;
+        background-size: 300px;
+    }
+    .URLs{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr ;
+    }
+    .URLs h3 {
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #picturies{
+        display: grid;
+        grid-template-columns: 50px 50px;
+        grid-template-rows: 50px 50px;
+        margin: 10px;
+    }
+    .pictureVK, .pictureTG, .pictureYT, .pictureVB{
+        background-repeat:no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 37px;
+      }
+      .images{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height:auto;
+        width: 100%;
+    }
+    .imag{
+        display: block;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        height:auto;
+        width: 75%;
+    }
+    
+    .im{ /* добавить тень*/
+        height:auto;
+        width: 100%;
+    }
+    
+  }
+  /*-----------------------Большой экран-----------------------------*/
+  @media screen and (min-width: 1601px) {
+  
+    #main {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 200px 5fr 200px;
+        grid-gap: 2vw;
+    }
+    #main > :only-child{
+        border-radius: 0px 0px 15px 15px;
+    }
+    #main > :first-child{
+        box-shadow: 0 0 5px 5px red;
+    }
+    /*div{ border: 1px solid #000;}*/
+
+
+    /*-----------------------Верхнее меню-----------------------------*/
+    .menu{
+        border-radius: 0px 0px 25px 25px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px 60px;
+        margin: 0;
+    }
+    button[name="menu"]{
+        height: 60px;
+        width: 200px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+    }
+    button[name="next"]{
+        height: 60px;
+        width: 60px;
+        margin-top: 5px;
+        background-color: rgb(80, 80, 80);
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+    }
+    .menuUp{
+        display: grid;
+        grid-template-columns: 300px 0px 1fr 300px;
+        grid-template-rows: 140px;
+    }
+    .miniMPic{
+        visibility: hidden;
+    }
+    nav{
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+    .poisk{
+        grid-template-columns: 1fr;
+        grid-template-rows: 85px 50px;
+    }
+    .poisk > :first-child{
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    .poisk > :last-child{
+        height: 60px;
+        
+    }
+
+    * {box-sizing: border-box;}
+
+
+    .profil{
+        display: grid;
+        grid-template-columns: 80px 140px 80px;
+        grid-template-rows: 1fr;
+    }
+    .menuDown{
+        display: grid;
+        grid-template-columns: 25% 1fr 1fr 1fr 1fr 25%;
+        grid-template-rows: 1fr;
+    }
+    .menuDown > form {
+        margin: 0;
+        width: 100px;
+    }
+    form {
+        position: relative;
+        width: 700px;
+        
+        margin: 0 auto;
+    }
+    .poisk > input, button {
+        border: none;
+        outline: none;
+        border-radius: 3px;
+    }
+    input {
+        width: 100%;
+        height: 42px;
+        background: #f9dada;
+        padding-left: 15px;
+        }
+        .poisk  button {
+            height: 26px;
+            width: 26px;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #f14242;
+            cursor: pointer;
+        }
+        button:before {
+            color: #f9dada;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+
+    /*-----------------------------Контент страницы------------------------*/
+
+    .content{
+        margin-left: 80px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .contentP{
+        margin-left: 80px;
+        margin-right: 80px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .poster{
+        border-radius: 50px;
+        margin-right: 15%;
+        margin-left: 10%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .poster > :first-child {
+
+        margin: 25px;
+    }
+    .poster p {
+        text-align: left;
+        font-weight: bold;
+        color: white;
+    }
+    .strings{
+        border-radius: 100px 0px 0px 100px;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 360px;
+    }
+    .stringsUp{
+        display: grid;
+        grid-template-columns: 80px 2fr 5fr 70px;
+        grid-template-rows: 1fr;
+    }
+    .stringsDown{
+        display: grid;
+        grid-template-columns: 80px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px;
+    }
+
+
+
+
+    /*-----------------------Подвал--------------------------*/
+
+    .footer{
+        display: grid;
+        grid-template-columns: 300px 1fr 300px ;
+        grid-template-rows: 1fr ;
+        margin: 0;
+        background-color: red;
+    }
+    .footer > div {
+        background-color: white;
+    }
+    .centerFooter{
+        display: grid;
+        grid-template-columns: 300px 1fr 300px ;
+        grid-template-rows: 1fr ;
+    }
+    #icoFooter{
+        background-image: url(../img/LogoName3.png);
+        margin-top: 20px;
+        width: 300px;
+        height: 40px;
+        background-size: 300px;
+    }
+    .URLs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-rows: 1fr ;
+    }
+    .URLs h3 {
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #picturies{
+        display: grid;
+        grid-template-columns: 50px 50px;
+        grid-template-rows: 50px 50px;
+        margin: 10px;
+    }
+    .pictureVK, .pictureTG, .pictureYT, .pictureVB{
+        background-repeat:no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 37px;
+    }
+    /*-------------------Мультимедия-------------------------*/
+    .images{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height:100%;
+        width: auto;
+    }
+    .imag{
+        display: block;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        height:auto;
+        width: 75%;
+    }
+    .im{ /* добавить тень*/
+        height:auto;
+        width: 100%;
+    }
+    .film{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr;
+    }
+    .filmN{
+        text-align: center;
+        font-style: normal;
+    }
+    video{
+        width:1280px;
+        height:720px;
+    }
+    /*-----------------------Технические работы-----------------------------*/
+    .TehWork{
+        background-image: url(../img/TehWork.png);
+        background-size: 1600px;
+        background-repeat: no-repeat;
+        width: 1600px;
+        height: 800px;
+        text-align: center;
+    }
+}

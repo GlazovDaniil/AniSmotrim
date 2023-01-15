@@ -1,0 +1,119 @@
+/*--------------------------Профиль------------------------------*/
+.Info, .Pay, .Achivment{
+    box-shadow: 0 0 5px 5px red;
+    background-color: dimgray;
+    margin-right: 15%;
+    margin-left: 10%;
+    margin-top: 50px;
+    display: grid;
+    border-radius: 2%;
+}
+
+.Info{
+    grid-template-columns:1fr 2fr;
+    grid-template-rows: 1fr;
+}
+.LeftI{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+}
+.LeftI > img {
+    margin-top: 20px;
+    height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .RightI{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .Achivment{
+        margin-right: 10%;
+        text-align: center;
+        grid-template-columns:100%;
+        grid-template-rows: 5% 95%;
+    }
+    .AchivmentAll{
+        display: grid;
+        grid-template-columns:1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .LeftI > img {
+        border-radius: 2%;
+    }
+}
+@media screen and (min-width: 600px) {
+
+    .RightI{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr;
+    }
+    .Achivment{
+        text-align: center;
+        grid-template-columns:100%;
+        grid-template-rows: 5% 95%;
+    }
+    .AchivmentAll{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+.InfoR{
+    text-align: right;
+    margin-right: 20px;
+}
+.InfoL{
+    text-align: left;
+}
+.Pay{
+    box-shadow: 0 0 5px 5px white;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+}
+ .Info  button,.Play  button /*Бесовщина твориться, работает и не работает*/ {
+    margin: 5px;
+}
+.Pay button{
+    margin: 20px;
+}
+/*---------------------------Форма-----------------------------*/
+.RightForm{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr;
+}
+fieldset{
+    margin-top: 50px;
+}
+legend{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    
+}
+form p {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+textarea{
+    width: 700px;
+    height: 300px;
+}
+.Help{
+    box-shadow: 0 0 5px 5px red;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 2%;
+    background-color: dimgray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    text-align: center;
+}

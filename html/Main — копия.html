@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content=".">
+      <title>AniSmotrim: Главная страница</title>
+      <link href="../css/All copy.css" rel="stylesheet" type="text/css">
+      <link href="../css/cookies.css" rel="stylesheet" type="text/css">
+      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </head>
+    <body class="page dark-theme">
+         <div id="main">
+          <div class="menu">
+            <div class="menuUp">
+               <div>
+                 <a href="Main — копия.html" class="logo"><img src="../img/logo4.png" class="images logo" alt="Logo"></a>
+               </div>
+                 <nav class="HiudenAccprdeon">
+                 <ul>
+                 <li><a href="#" class="miniMenu"><img src="../img/menu_682685_list_512x512.png" class="miniMPic" alt="Logo"></a>
+                   <ul>
+                     <li><a href="Anime.html">Аниме</a></li>
+                     <li><a href="Manga.html">Манга</a></li>
+                     <li><a href="Pers.html">Персонажи</a></li>
+                     <li><a href="Kaguya.html">Случайное аниме</a></li>
+                     <li><a href="Kaguya.html">Случайн</a></li>
+                 </ul>
+                 </li>
+                 </ul>
+               </nav>
+               <div class="poisk">
+                   <div><a href="Main — копия.html"><img src="../img/LogoName3.png" class="images" alt="LogoName"></a></div>
+                   <div>
+                      <form>
+                         <input type="text" placeholder="Искать здесь...">
+                         <button type="submit"></button>
+                       </form>
+                   </div>
+               </div>
+               <div class="profil">
+                <div><img src="../img/Profil.jpg" class="imag hidenImag" alt="LogoName"></div>
+                <div>
+                   <a href="Profil.html"><h2>Профиль</h2></a>
+                   <h2>Выход</h2>
+                </div>
+                </div>
+            </div>
+            <div class="menuDown">
+              <div></div>
+              <div id="mainS">
+                <!-- Меню получает класс "active". Чтобы предотвратить "прыжки" 
+                  страницы при изменении ссылки, используем модификатор "prevent" 
+                  (сокращение для preventDefault). -->
+                <nav v-bind:class="active" v-on:click.prevent>
+                    <!-- Когда происходит нажатие на ссылку, вызываем метод makeActive -->      
+                    <a href="#" class="contenthome" v-on:click="makeActive('home')">Главная</a>
+                    <a href="#" class="contentmanga" v-on:click="makeActive('manga')">Манга</a>  
+                    <a href="#" class="contentpers" v-on:click="makeActive('pers')">Персонажи</a>
+                    <a href="#" class="contentrandomanime" v-on:click="makeActive('randomanime')">Случайное анеме</a>
+                </nav>
+                <!-- Шаблонное значение будет заменено на значение переменной "active" -->
+                <p>Выбран класс <b>{{active}}</b></p>
+              </div>
+            </div>
+        </div>
+
+        <div class="AllContent" id="contenthome"></div>
+
+            <footer class="footer">
+              <div></div>
+              <div class="centerFooter">
+                <div>
+                  <div id="icoFooter"></div>
+                  <p class="fut">© 2022 «AniSmotrim» — онлайн кинотеатр</p>
+                  <button class="theme-button" type="button">Изменить тему</button>
+                </div>
+                <div class="URLs">
+                  <div>
+                    <a href="Help.html"><p class="fut">Тех. поддержка</p></a>
+                    <a href="../../../../../../../games/OSPanel/domains/localhost/index.html"><p class="fut">Зарегистрироваться</p></a>
+                    <a href=""><p class="fut">В рассрочку</p></a>
+                    <a href=""><p class="fut">Обзоры</p></a>
+                  </div>
+                  <div> 
+                    <a href="Oplata.html"><p class="fut">Оплата</p></a>
+                    <a href=""><p class="fut">Гарантия, возврат</p></a>
+                    <a href=""><p class="fut">Политика кофидециальности</p></a>
+                    <a href=""><p class="fut">Правила продажи подписки</p></a>
+                  </div>
+                  <div>
+                    <h3 class="fut">Мы в социальных сетях</h3>
+                    <div id="picturies">
+                      <a href="https://vk.com/dantesmen" target="_blank"><div class="pictureVK"></div></a>
+                      <a href="" target="_blank"><div class="pictureTG"></div></a>
+                      <a href="" target="_blank"><div class="pictureYT"></div></a>
+                      <a href="" target="_blank"><div class="pictureVB"></div></a>
+                    </div>
+                  </div>
+                </div>
+                <div></div>
+              </div>
+              <div></div>
+              
+                <div id="cookie_note">
+                  <p>Мы используем файлы cookies для улучшения работы сайта. Оставаясь 
+                    на нашем сайте, вы соглашаетесь с условиями использования файлов 
+                    cookies. Чтобы ознакомиться с нашими Положениями о конфиденциальности 
+                    и об использовании файлов cookie, <a href="#" target="_blank">нажмите здесь</a>.</p>
+                  <button class="button cookie_accept btn btn-primary btn-sm">Я согласен</button>
+              </div>
+          </footer>
+        </div>
+        <script src="../java/main.js"></script>
+        <script src="../java/Cookies.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+        <script src="../java/MenuButtons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../java/Header.js"></script>
+        <script src="../java/Pers-Manga.js"></script>
+
+        <script type="text/babel"> 
+        
+              ReactDOM.render(
+                  <div class="content">
+                      <div class="poster">
+                      <div>
+                          <img src="../img/Koro.jpg" alt="Poster" class="im"></img>
+                      </div>
+                      <div>
+                          <h2>Почему ученики хотят ликведировать своего учителя?</h2>
+                          <p>Самый худший класс - в данном случае это не просто слова 
+                            рассерженной преподавательницы, а репутация группы 3-E, на которую 
+                            остальные школьники смотрят сверху вниз, считая ребят «классом лузеров». 
+                            Всё в корне меняется, когда загадочное суперсильное существо почти 
+                            уничтожает Луну и грозит уничтожить Землю, при этом выдвигая условие: 
+                            супер-опасный вторженец хочет стать учителем, да не простым - обучить 
+                            необучаемый «класс лузеров», сделать худший класс лучшим. В то же 
+                            время его новым ученикам отводится иная роль: любым способом к выпускному 
+                            расправиться со своим новым учителем и спасти мир.</p>
+                          <p>«Ansatsu Kyoushitsu» - душевное и проникновенное произведение с 
+                            приятной стилизацией, обилием шуток и курьёзов, поднимающее сразу 
+                            несколько злободневных вопросов и пытающееся на них ответить. История 
+                            о том, как загадочный учитель раскрывает в «худших из худших» их 
+                            таланты и учит поступать правильно, рекомендуется к ознакомлению всем 
+                            без исключения.</p>
+                      </div>
+                      </div>
+    
+                      <div class="strings">
+    
+                          <div class="stringsUp">
+                              <div></div>
+                              <div><h2>Для вас</h2></div>
+                              <div></div>
+                              <div><button name="next">Next</button></div>
+                          </div>
+                          <div class="stringsDown">
+                              <div></div>
+                              <div class="film">
+                                  <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                                  <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                              </div>
+                              <div class="film">
+                              <div><img src="../img/Kagy.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">В любви как на войне</h2></a></div>
+                              </div>
+                              <div class="film">
+                              <div><img src="../img/JJ.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">JoJo`s</h2></a></div>
+                              </div>
+                              <div class="film">
+                              <div><img src="../img/Pivo.jpeg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                              </div>
+                              <div class="film">
+                              <div><img src="../img/rei.jpeg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                              </div>
+                              <div class="film">
+                              <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                              </div>
+                              <div class="film">
+                              <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                              </div>
+                              <div class="film">
+                              <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="strings">
+    
+                      <div class="stringsUp">
+                          <div></div>
+                          <div><h2>Для вас</h2></div>
+                          <div></div>
+                          <div><button name="next">Next</button></div>
+                      </div>
+                      <div class="stringsDown">
+                          <div></div>
+                          <div class="film">
+                              <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                          </div>
+                          <div class="film">
+                              <div><img src="../img/Kagy.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">В любви как на войне</h2></a></div>
+                          </div>
+                          <div class="film">
+                              <div><img src="../img/JJ.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">JoJo`s</h2></a></div>
+                          </div>
+                          <div class="film">
+                              <div><img src="../img/Pivo.jpeg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                          </div>
+                          <div class="film">
+                              <div><img src="../img/rei.jpeg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                          </div>
+                          <div class="film">
+                              <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                          </div>
+                          <div class="film">
+                              <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                          </div>
+                          <div class="film">
+                              <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                              <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                          </div>
+                      </div>
+                      </div>
+                  </div>, 
+              document.getElementById('contenthome'));
+            
+        </script>
+
+        <script type="text/babel"> 
+        function ContentingMain(){
+            ReactDOM.render(
+                <div class="content">
+                    <div class="poster">
+                    <div>
+                        <img src="../img/Koro.jpg" alt="Poster" class="im"></img>
+                    </div>
+                    <div>
+                        <h2>Почему ученики хотят ликведировать своего учителя?</h2>
+                        <p>Самый худший класс - в данном случае это не просто слова 
+                          рассерженной преподавательницы, а репутация группы 3-E, на которую 
+                          остальные школьники смотрят сверху вниз, считая ребят «классом лузеров». 
+                          Всё в корне меняется, когда загадочное суперсильное существо почти 
+                          уничтожает Луну и грозит уничтожить Землю, при этом выдвигая условие: 
+                          супер-опасный вторженец хочет стать учителем, да не простым - обучить 
+                          необучаемый «класс лузеров», сделать худший класс лучшим. В то же 
+                          время его новым ученикам отводится иная роль: любым способом к выпускному 
+                          расправиться со своим новым учителем и спасти мир.</p>
+                        <p>«Ansatsu Kyoushitsu» - душевное и проникновенное произведение с 
+                          приятной стилизацией, обилием шуток и курьёзов, поднимающее сразу 
+                          несколько злободневных вопросов и пытающееся на них ответить. История 
+                          о том, как загадочный учитель раскрывает в «худших из худших» их 
+                          таланты и учит поступать правильно, рекомендуется к ознакомлению всем 
+                          без исключения.</p>
+                    </div>
+                    </div>
+  
+                    <div class="strings">
+  
+                        <div class="stringsUp">
+                            <div></div>
+                            <div><h2>Для вас</h2></div>
+                            <div></div>
+                            <div><button name="next">Next</button></div>
+                        </div>
+                        <div class="stringsDown">
+                            <div></div>
+                            <div class="film">
+                                <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                                <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                            </div>
+                            <div class="film">
+                            <div><img src="../img/Kagy.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">В любви как на войне</h2></a></div>
+                            </div>
+                            <div class="film">
+                            <div><img src="../img/JJ.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">JoJo`s</h2></a></div>
+                            </div>
+                            <div class="film">
+                            <div><img src="../img/Pivo.jpeg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                            </div>
+                            <div class="film">
+                            <div><img src="../img/rei.jpeg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                            </div>
+                            <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                            </div>
+                            <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                            </div>
+                            <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="strings">
+  
+                    <div class="stringsUp">
+                        <div></div>
+                        <div><h2>Для вас</h2></div>
+                        <div></div>
+                        <div><button name="next">Next</button></div>
+                    </div>
+                    <div class="stringsDown">
+                        <div></div>
+                        <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                        </div>
+                        <div class="film">
+                            <div><img src="../img/Kagy.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">В любви как на войне</h2></a></div>
+                        </div>
+                        <div class="film">
+                            <div><img src="../img/JJ.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">JoJo`s</h2></a></div>
+                        </div>
+                        <div class="film">
+                            <div><img src="../img/Pivo.jpeg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                        </div>
+                        <div class="film">
+                            <div><img src="../img/rei.jpeg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                        </div>
+                        <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                        </div>
+                        <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                        </div>
+                        <div class="film">
+                            <div><img src="../img/Eva.jpg" alt="Poster" class="imag"></img></div>
+                            <div><a href="Kaguya.html"><h2 class="filmN">Евангелион</h2></a></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>, 
+            document.getElementById('contenthome'));
+          }
+      </script>
+      <script type="text/babel">
+        function ContentingManga(){
+          ReactDOM.render(
+            <div class="content"><div class="TehWork"></div></div>, 
+          document.getElementById('contenthome'));
+        }
+      </script>
+      <script type="text/babel">
+        function ContentingPers(){
+          ReactDOM.render(
+            <div class="content"><div class="TehWork"></div></div>, 
+          document.getElementById('contenthome'));
+        }
+      </script>
+      <script type="text/babel">
+        function ContentingRand1(){
+          ReactDOM.render(
+            <div class="content">
+
+            <div class="poster">
+              <div>
+                <img src="../img/LiV.jpg" alt="Poster" class="im"></img>
+              </div>
+              <div>
+                <h2>Госпожа Кагуя: в любви как на войне</h2>
+                <p>Лидерство в подростковой сфере имеет огромнейшее значение.
+                       Оно наделяет уверенностью и дает уважение со стороны сверстников.
+                        Ребятам, отличающимся выдающимся интеллектом, заполучить привлекательный 
+                        титул довольно легко. Но разряд некого гения не гарантирует, что к
+                         ногам подростка моментально падут все блага. В знаменитой академии Сюити, 
+                         относящейся к престижным заведениям, учатся довольно способные парни и 
+                         девчонки. Практически каждый здесь наделен уникальным даром. Хотя даже 
+                         в «гениальной» компании может найтись поистине недосягаемая личность.</p>
+                     <p>Кагуя Синомия, а также Миюки Сироганэ врываются в академическое общество,
+                       считающееся элитой. Главные герои становятся руководителями студенческого
+                        совета. Однако между персонажами совершенно нет взаимопонимания. Одни 
+                        студенты смотрят на парочку с неподдельной любовью, а другие испытывают 
+                        к ним исключительно зависть. Но соратников не волнует общественное мнение. 
+                        Их больше заботят разрастающиеся чувства. Кагуя и Миюки не могут разрешить 
+                        себе влюбиться без памяти. В результате взаимная гордость заставляет из 
+                        развернуть нешуточную борьбу. Пока сложно предсказать, к чему приведет 
+                        противостояние.</p>
+              </div>
+            </div>
+
+            <div class="video">
+              <video  controls src="../img/fujiwara.mp4" poster="../img/LiV.jpg"></video>
+            </div>
+            </div>,
+          document.getElementById('contenthome'));
+        }
+        function ContentingRand2(){
+          ReactDOM.render(
+            <div class="content">
+
+            <div class="poster">
+              <div>
+                <img src="../img/Koro.jpg" alt="Poster" class="im"></img>
+              </div>
+              <div>
+                <h2>Класс убийц</h2>
+                <p>Самый худший класс - в данном случае это не просто слова 
+                          рассерженной преподавательницы, а репутация группы 3-E, на которую 
+                          остальные школьники смотрят сверху вниз, считая ребят «классом лузеров». 
+                          Всё в корне меняется, когда загадочное суперсильное существо почти 
+                          уничтожает Луну и грозит уничтожить Землю, при этом выдвигая условие: 
+                          супер-опасный вторженец хочет стать учителем, да не простым - обучить 
+                          необучаемый «класс лузеров», сделать худший класс лучшим. В то же 
+                          время его новым ученикам отводится иная роль: любым способом к выпускному 
+                          расправиться со своим новым учителем и спасти мир.</p>
+                        <p>«Ansatsu Kyoushitsu» - душевное и проникновенное произведение с 
+                          приятной стилизацией, обилием шуток и курьёзов, поднимающее сразу 
+                          несколько злободневных вопросов и пытающееся на них ответить. История 
+                          о том, как загадочный учитель раскрывает в «худших из худших» их 
+                          таланты и учит поступать правильно, рекомендуется к ознакомлению всем 
+                          без исключения.</p>
+              </div>
+            </div>
+
+            <div class="video">
+              <iframe src="https://www.youtube.com/embed/6cz7lzmDul4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            </div>,
+          document.getElementById('contenthome'));
+        }
+        function ContentingRand3(){
+          ReactDOM.render(
+            <div class="content">
+
+            <div class="poster">
+              <div>
+                <img src="../img/JJ1.jpg" alt="Poster" class="im"></img>
+              </div>
+              <div>
+                <h2>Невероятное приключение ДжоДжо</h2>
+                <p>Во всех поколениях прекрасного рода Джостаров есть такой 
+                  определенный потомок, чье имя начинается с того же слога, 
+                  и у него появляется привычное в таких случаях прозвище – ДжоДжо. 
+                  Начиная с непростого девятнадцатого столетия смыслом жизни этого 
+                  парня становится спасение всего живого на Земле и противостояние 
+                  вампирам, страшным зомби и даже жестоким серийным маньякам. Все 
+                  началось, когда мужчина Джордж Джостар, проживающий еще в викторианской 
+                  эпохе,однажды спутал по непонятным причинам воришку со спасителем, 
+                  а по итогу он еще взял к себе в дом и сына «добродушного» человека, 
+                  которого она толком и не знал.</p>
+                <p>Ну что ж, с этого момента потомкам на несколько сотен лет вперед не 
+                  стоит волноваться по поводу скуки и безделья. У Джорджа имеется сын 
+                  по имени Джонатан, это молодой совершенно бескорыстный молодой человек. 
+                  Однажды он узнает об ужасном секрете, его ему придется держать в себе 
+                  до конца своих дней. Но он решает раскрыть коварные планы своего брата, 
+                  спасти честь его семейства, защитить и вернуть любовь, которая уже 
+                  давно была потеряна. Если дело благородное, то становятся хороши все 
+                  средства – боевые восточные искусства, специальная магия, и даже понятия 
+                  преступников.</p>
+              </div>
+            </div>
+
+            <div class="video">
+              <iframe src="https://www.youtube.com/embed/WyA6K3Kik0o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            </div>,
+          document.getElementById('contenthome'));
+        }
+        function ContentingRand4(){
+          ReactDOM.render(
+            <div class="content">
+
+            <div class="poster">
+              <div>
+                <img src="../img/Pivo.jpeg" alt="Poster" class="im"></img>
+              </div>
+              <div>
+                <h2>Евангелион</h2>
+                <p>Проходит пятнадцать лет после обрушения на Землю масштабной 
+                  необъяснимой катастрофы. Гигантское количество людей погибло
+                   в ходе воцарившегося хаоса, а выжившие счастливчики даже 
+                   подумать не могли, что страшное происшествие является лишь 
+                   началом цепочки испытаний. В определенный момент планета 
+                   подверглась атаке огромных существ, называемых Ангелами. Оружием, 
+                   способным дать достойный отпор монстрам, стали боевые роботы 
+                   категории Евангелион, созданные гениальными учеными при помощи 
+                   современных технологий. Но управлять уникальными биороботами 
+                   могли только отдельные пилоты, умеющие преодолевать процедуру 
+                   синхронизации с Евангелионом.</p>
+                <p>Тщательные исследования показали, что наилучшие результаты 
+                  проявляются в подростковом возрасте. Именно поэтому на защиту
+                   родной обители встали юные школьники. Талантливые бойцы приступили
+                   к учениям в засекреченном подземном городе «Токио-3», ставшим штаб-квартиро
+                   сформированного тайного сообщества «NERV», которое обеспечивало 
+                   безопасность от вторжения инопланетян. Именно эта могущественная 
+                   организация и стала последней надеждой человеческой цивилизации, 
+                   находящейся в небывалой опасности.</p>
+              </div>
+            </div>
+
+            <div class="video">
+              <iframe src="https://www.youtube.com/embed/b9TE3226T-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            </div>,
+          document.getElementById('contenthome'));
+        }
+      </script>
+      
+      
+  </body>
+</html>

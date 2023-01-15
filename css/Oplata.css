@@ -1,0 +1,62 @@
+[v-cloak] {
+	display: none;
+  }
+  
+
+
+
+
+
+.content form{
+	font:15px 'Open Sans', sans-serif;
+	text-align:center;
+	background-color: #7a7a7a;
+	box-shadow: #7a7a7a 5px;
+	width: 700px;
+	padding: 35px 60px;
+	margin: 50px auto;
+}
+
+.content form h1{
+	color:#fff;
+	font-size:48px;
+	font-family:'Open Sans', sans-serif;
+	line-height:1;
+}
+
+.content form ul{
+	list-style:none;
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+	text-align: left;
+	margin:20px 0 15px;
+}
+
+.content form ul li{
+	padding:20px 30px;
+	background-color:#eb6262;
+	margin-bottom:8px;
+	cursor:pointer;
+}
+
+.content form ul li span{
+	float:right;
+}
+
+.content form ul li.active{
+	background-color:#4fc766;
+}
+
+.content div.total{
+	border-top:1px solid #fff;
+	padding:15px 30px;
+	font-size:20px;
+	font-weight:bold;
+	text-align: left;
+	color:#fff;
+}
+
+.content div.total span{
+	float:right;
+}

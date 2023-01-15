@@ -1,0 +1,44 @@
+@media screen and (max-width: 1600px) {
+.video{
+    box-shadow: 0 0 5px 5px red;
+    margin-top: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    background-color: dimgray;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+video{
+    width:80%;
+    height:auto;
+}
+}
+@media screen and (min-width: 1600px) {
+    
+    
+    .video{
+        margin-top: 20px;
+        margin-right: 15%;
+        margin-left: 10%;
+        border-radius: 10px;
+        text-align: center;
+    }
+}
+.light-theme
+video {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.backImag {
+    background: #000 url(../img/KaguyaBG1.png); /* Фоновый цвет и фоновый рисунок*/
+    background-attachment: fixed; /* Фон страницы фиксируется */
+    background-repeat: repeat-x; /* Изображение повторяется по горизонтали */
+    width: 100%;
+    height: auto;
+}
+iframe{
+    width:95%;
+    height:600px;
+}
